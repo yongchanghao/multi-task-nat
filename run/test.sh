@@ -21,7 +21,7 @@ CUDA_VISIBLE_DEVICES=0 python generate.py \
     -s $SRC -t $TGT \
     --gen-subset test \
     --max-tokens 2048 \
-    --task translation_sat \
+    --task translation_mt \
     --generator nat \
     --path $CHECKPOINT/$ckpt \
     --iter-decode-max-iter 10 \
