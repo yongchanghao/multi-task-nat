@@ -15,7 +15,7 @@ from fairseq.utils import new_arange
 
 
 @register_task('translation_mt')
-class TranslationSemiAutoRegressiveTask(TranslationTask):
+class TranslationMultiTaskAutoRegressiveTask(TranslationTask):
     @staticmethod
     def add_args(parser):
         """Add task-specific arguments to the parser."""

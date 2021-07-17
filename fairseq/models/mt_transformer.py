@@ -19,7 +19,7 @@ DEFAULT_MAX_TARGET_POSITIONS = 1024
 
 
 @register_model("mt_transformer")
-class SATModel(BaseFairseqModel):
+class MultiTaskNATModel(BaseFairseqModel):
     def __init__(self, args, at_model, nat_model):
         super().__init__()
         self.args = args
@@ -213,7 +213,7 @@ class SATModel(BaseFairseqModel):
         return self.at_model.max_positions()
 
 
-@register_model_architecture("sat_transformer", "sat_transformer")
+@register_model_architecture("mt_transformer", "mt_transformer")
 def base_architecture(args):
     args.encoder_embed_path = getattr(args, "encoder_embed_path", None)
     args.encoder_embed_dim = getattr(args, "encoder_embed_dim", 512)
